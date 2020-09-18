@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { yelp } from '../api/yelp';
+import { yelp, yelpFetch } from '../api/yelp';
 
 export default () => {
   const [results, setResults] = useState([]);
@@ -15,9 +15,17 @@ export default () => {
         },
       });
 
+      // const fetchCall = await yelpFetch(
+      //   `/search?limit=${50}&term=${encodeURIComponent(
+      //     searchTerm
+      //   )}&location=${'san jose'}`
+      // );
+      // const results = await fetchCall.json();
+
       setResults(response.data.businesses);
       setErrorMessage('');
     } catch (err) {
+      console.log(err);
       setErrorMessage('Something went wrong! Please try again later.');
     }
   };
