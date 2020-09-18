@@ -23,9 +23,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   labelStyle: {
-    fontSize: 11,
+    fontSize: 12,
     color: '#333',
-    fontWeight: '300',
+    fontWeight: 'bold',
     marginRight: 10,
   },
   iconStyle: {
