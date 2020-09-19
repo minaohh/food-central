@@ -15,4 +15,13 @@ const yelp = axios.create({
 
 // yelp.get('/search'); //won't have to write out the entire URL
 
-export { yelp };
+const yelpFetch = (path) => {
+  return fetch(`${BASE_URL}${path}`, {
+    headers: {
+      Authorization:
+        'Bearer 04uUW6QhPLDJMyhwJbcU3PNvWKBk2pCvZuE02TwwFXK8Yfn2JGX4HW5kXPWoD5UK4bVosuhBDMeHA9kIvVIOX6Fpg0_x3L3_UHpVSuGVb1knS3SAcV6I5IlgCDhjX3Yx',
+    },
+  });
+};
+
+export { yelp, yelpFetch };
