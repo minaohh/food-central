@@ -13,7 +13,7 @@ export default function App() {
           name="Home"
           component={Home}
           options={{
-            title: 'Restaurant Search',
+            title: 'FoodCentral',
             headerStyle: { backgroundColor: '#a29bfe' },
             headerTitleStyle: { fontSize: 22, fontWeight: 'bold' },
           }}
